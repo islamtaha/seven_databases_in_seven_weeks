@@ -1,1 +1,3 @@
-# seven_databases_in_seven_weeks
+# seven databases in seven weeks
+
+my repository for seven databases in seven weeks book 
