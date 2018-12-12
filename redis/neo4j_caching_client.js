@@ -34,7 +34,7 @@ exports.createClient = function(options) {
 
   // lookup a key/value node by index.
   neo4jClient.lookupNode = function(index, key, value, callback) {
-    var path = ['index/node', esc(index), esc(key), esc(value)];
+    var path = ['db/data/index/node', esc(index), esc(key), esc(value)];
     neo4jClient.get(path, callback);
   };
   
@@ -44,7 +44,7 @@ exports.createClient = function(options) {
     input[key] = value;
     neo4jClient.post('node', input, function(obj){
       var data = { uri: obj.self, key: key, value: value };
-      neo4jClient.post(['index/node', esc(index)], data, callback);
+      neo4jClient.post(['db/data/index/node', esc(index)], data, callback);
     });
   }
   

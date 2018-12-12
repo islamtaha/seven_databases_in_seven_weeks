@@ -63,7 +63,7 @@ function trackLineCount( increment ) {
 function postDoc( url, docsString, count ) {
 
   var request = http.request({
-	port:5884,
+	port:5984,
     method:'POST',
     path:url,
 	host:'localhost',
